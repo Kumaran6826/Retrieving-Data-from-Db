@@ -14,15 +14,15 @@ namespace Retrieving_Data_from_Db
         {
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
             SingleShareDataVariables s=new SingleShareDataVariables();
-            builder.DataSource = "10.10.15.8";
-            builder.UserID = "test";
-            builder.Password = "123456";
-            builder.InitialCatalog = "shark";
+            builder.DataSource = "Enter DataSource";
+            builder.UserID = "Enter UserId";
+            builder.Password = "Enter Password";
+            builder.InitialCatalog = "Enter DB";
 
             using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
             {
                 connection.Open();
-                String sql = "SELECT [ip].[Open] as OpenValue,[ip].[high] as highValue ,[ip].[Low] as lowValue,[ip].[Volume] as volumeValue,[ip].[bid] as BidValue,[ip].[Ask] as AskValue from [dbo].[InstrumentPrice] ip where InstrumentId in(32865,32864);";
+                String sql = "Type The Query here";
 
                 using (SqlCommand command = new SqlCommand(sql, connection))
                 {
