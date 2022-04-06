@@ -18,7 +18,7 @@ namespace Retrieving_Data_from_Db
             builder.UserID = "Enter UserId";
             builder.Password = "Enter Password";
             builder.InitialCatalog = "Enter DB";
-
+           
             using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
             {
                 connection.Open();
@@ -65,6 +65,7 @@ namespace Retrieving_Data_from_Db
                         decimal AskValue = decimal.Round(Convert.ToDecimal(row["AskValue"].ToString()), 2);
                         Console.WriteLine("AskValue {0}", AskValue);
                         ss.askValue = AskValue;
+                        ss.lowValue = 0;
                         list.Add(ss);
 
                     }
