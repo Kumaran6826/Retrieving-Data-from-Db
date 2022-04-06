@@ -65,6 +65,7 @@ namespace Retrieving_Data_from_Db
                         decimal AskValue = decimal.Round(Convert.ToDecimal(row["AskValue"].ToString()), 2);
                         Console.WriteLine("AskValue {0}", AskValue);
                         ss.askValue = AskValue;
+                        ss.highValue = AskValue;
                          list.Add(ss);
 
                     }
